@@ -1,315 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Transition Plan Template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS HEX */
         :root {
-    --primary-color: #2c3e50; /* Dark blue-gray for text and headings */
-    --secondary-color: #34495e; /* Slightly lighter blue-gray for accents */
-    --accent-color: #3498db; /* Bright blue for interactive elements */
-    --background-color: #f5f6fa; /* Light gray for the background */
-    --card-background: #ffffff; /* White for cards and sections */
-    --border-color: #dfe6e9; /* Light gray for borders */
-    --success-color: #27ae60; /* Green for success messages or buttons */
-    --warning-color: #e67e22; /* Orange for warnings or secondary actions */
-    --error-color: #e74c3c; /* Red for errors or destructive actions */
-    --text-color: #2c3e50; /* Dark text for readability */
-    --text-light: #95a5a6; /* Light gray for secondary text */
-}
+            /* Blue palette */
+            --primary-color: #1e3a8a;    /* Deep blue */
+            --secondary-color: #3b82f6;  /* Vibrant blue */
+            --accent-color: #60a5fa;     /* Light blue */
+            --background-color: #f0f7ff; /* Very light blue */
+            --card-background: #ffffff;  /* White */
+            --border-color: #bfdbfe;     /* Pale blue */
+            --success-color: #15803d;    /* Green (kept for success contrast) */
+            --warning-color: #d97706;    /* Amber (kept for warning contrast) */
+            --error-color: #b91c1c;      /* Red (kept for error contrast) */
+            --text-color: #1e3a8a;       /* Deep blue */
+            --text-light: #64748b;      /* Slate blue */
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+        }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--background-color);
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+        }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-}
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
 
-h1 {
-    text-align: center;
-    border-bottom: 3px solid var(--accent-color);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
 
-.section {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    margin-bottom: 30px;
-    border: 1px solid var(--border-color);
-}
+        .section {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
 
-label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-    color: var(--primary-color);
-}
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: var(--primary-color);
+        }
 
-input[type="text"], textarea, select, select[multiple] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 7px;
-    border: 1.5px solid var(--border-color);
-    border-radius: 6px;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
-    color: var(--text-color);
-}
+        input[type="text"], textarea, select, select[multiple] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+            color: var(--text-color);
+        }
 
-input[type="text"]:focus, textarea:focus, select:focus, select[multiple]:focus {
-    border-color: var(--accent-color);
-    outline: none;
-}
+        input[type="text"]:focus, textarea:focus, select:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
 
-textarea {
-    height: 100px;
-    resize: vertical;
-}
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-table, th, td {
-    border: 1.5px solid var(--border-color);
-}
+        table, th, td {
+            border: 1.5px solid var(--border-color);
+        }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-}
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
 
-th {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-}
+        th {
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
 
-.instructions {
-    font-style: italic;
-    color: var(--text-light);
-    margin-top: 5px;
-    display: block;
-}
+        .instructions {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 5px;
+            display: block;
+        }
 
-button {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.2s;
-}
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
 
-button:hover {
-    background-color: var(--secondary-color);
-}
+        button:hover {
+            background-color: var(--primary-color);
+        }
 
-.add-button {
-    background-color: var(--success-color);
-}
+        .add-button {
+            background-color: var(--success-color);
+        }
 
-.add-button:hover {
-    background-color: #219653;
-}
+        .add-button:hover {
+            background-color: #166534;
+        }
 
-.remove-button {
-    background-color: var(--error-color);
-}
+        .remove-button {
+            background-color: var(--error-color);
+        }
 
-.remove-button:hover {
-    background-color: #c0392b;
-}
+        .remove-button:hover {
+            background-color: #991b1b;
+        }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            color: white;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 250px;
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -125px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+        .notification.success {
+            background-color: var(--success-color);
+        }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: var(--primary-color) transparent transparent transparent;
-}
+        .notification.error {
+            background-color: var(--error-color);
+        }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-#pdf-preview {
-    display: none;
-    background-color: var(--card-background);
-    padding: 30px;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#pdf-preview h1 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-#pdf-preview h2 {
-    color: var(--primary-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 5px;
-    margin-top: 25px;
-}
-
-#pdf-preview .info-row {
-    margin-bottom: 15px;
-}
-
-#pdf-preview .label {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-#pdf-preview .value {
-    display: inline-block;
-}
-
-#pdf-preview .text-block {
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-#pdf-preview table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-#pdf-preview th, #pdf-preview td {
-    border: 1px solid var(--border-color);
-    padding: 8px;
-    text-align: left;
-}
-
-#pdf-preview th {
-    background-color: var(--background-color);
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-@media print {
-    body > *:not(#pdf-preview) {
-        display: none;
-    }
-
-    #pdf-preview {
-        display: block !important;
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .button-container {
-        display: none;
-    }
-}
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
-
 <body>
-
     <h1>Career Transition Plan Template</h1>
-    <div class="section" style="background-color:#F68337;font-weight: bold;color:#FFFFFF;padding:20px;">
+    
+    <div class="section" style="background-color: var(--accent-color); color: var(--primary-color);">
         <h2>Privacy Notice</h2>
-        <p>We respect your privacy. The data you enter into this form is stored *only* on your local computer within your browser's storage. We do not collect, transmit, or sell any of your personal information. This ensures your data remains private and under your control.</p>
+        <p>We respect your privacy. The data you enter is stored only on your local computer within your browser's storage.</p>
     </div>
+
     <div class="section">
         <h2>Instructions</h2>
-        <p>Welcome to the Career Transition Plan Template! This form is designed to help you strategically plan your career move, taking into account your skills, goals, and the rapidly evolving job market.</p>
-        <p>Follow the sections below, filling out each field as accurately as possible. The tooltips provide guidance on how to best approach each section.</p>
-        <p>Click the save button to save your progress, the load button to load save data, the import button to import a previus plan and Generate to see a printable version.</p>
+        <p>Welcome to the Career Transition Plan Template! Fill out each section below to plan your career move strategically.</p>
     </div>
 
     <div class="section">
         <h2>Personal Information</h2>
-        <label for="name">Name:
-            <span class="instructions">Enter your full name</span>
-        </label>
+        <label for="name">Name: <span class="instructions">Enter your full name</span></label>
         <input type="text" id="name" required>
 
-        <label for="role">Current Role/Profession:
-            <span class="instructions">What is your current job title or profession?</span>
-        </label>
+        <label for="role">Current Role/Profession: <span class="instructions">What is your current job title?</span></label>
         <input type="text" id="role">
 
-        <label for="industry">Field/Industry:
-            <span class="instructions">What field or industry do you currently work in?</span>
-        </label>
+        <label for="industry">Field/Industry: <span class="instructions">What industry do you work in?</span></label>
         <input type="text" id="industry">
 
-        <label>Period Covered:
-            <span class="instructions">Set the timeframe for this plan (typically 6-12 months)</span>
-        </label>
-        <input type="date" id="start-date" class="date-input"> to
-        <input type="date" id="end-date" class="date-input">
+        <label>Period Covered: <span class="instructions">Set timeframe (typically 6-12 months)</span></label>
+        <input type="date" id="start-date"> to
+        <input type="date" id="end-date">
     </div>
 
     <div class="section">
         <h2>Career Goals</h2>
-        <label for="short-term">Short-term (6-12 months):
-            <span class="instructions">What do you want to achieve in the next 6-12 months? Be specific!</span>
-        </label>
+        <label for="short-term">Short-term (6-12 months): <span class="instructions">What do you want to achieve?</span></label>
         <textarea id="short-term"></textarea>
 
-        <label for="long-term">Long-term (2-5 years):
-            <span class="instructions">Where do you see yourself in 2-5 years? What is your ultimate career aspiration?</span>
-        </label>
+        <label for="long-term">Long-term (2-5 years): <span class="instructions">Where do you see yourself?</span></label>
         <textarea id="long-term"></textarea>
 
-        <label>Core Values (Choose 3):
-            <span class="instructions">What three words best describe what's most important to you in your work?</span>
-        </label>
+        <label>Core Values (Choose 3): <span class="instructions">What matters most in your work?</span></label>
         <select multiple id="core-values">
             <option value="creativity">Creativity</option>
             <option value="impact">Impact</option>
@@ -322,15 +217,11 @@ button:hover {
             <option value="challenge">Challenge</option>
         </select>
 
-        <label for="elevator-pitch">Elevator Pitch:
-            <span class="instructions">Summarize your career goals and value proposition in a concise "elevator pitch". (2-3 sentences)</span>
-        </label>
+        <label for="elevator-pitch">Elevator Pitch: <span class="instructions">Summarize your goals (2-3 sentences)</span></label>
         <textarea id="elevator-pitch" placeholder="e.g., I am a marketing professional..."></textarea>
 
-        <label for="stop-doing">What will you STOP doing?
-            <span class="instructions">What activities are you currently doing that are NOT contributing to your goals? Be honest!</span>
-        </label>
-        <textarea id="stop-doing" placeholder="List activities to eliminate for more focus"></textarea>
+        <label for="stop-doing">What will you STOP doing? <span class="instructions">Activities not aiding your goals</span></label>
+        <textarea id="stop-doing" placeholder="List activities to eliminate"></textarea>
     </div>
 
     <div class="section">
@@ -338,477 +229,459 @@ button:hover {
         <table id="skills-table">
             <thead>
                 <tr>
-                    <th>Current Skills
-                        <span class="instructions">What are your existing skills? Be specific (e.g., Project Management).</span>
-                    </th>
-                    <th>Proficiency (1-5)
-                        <span class="instructions">How proficient are you in each skill? (1=Beginner, 5=Expert)</span>
-                    </th>
-                    <th>Skills to Develop
-                        <span class="instructions">What new skills do you need to acquire for your desired career?</span>
-                    </th>
-                    <th>Priority
-                        <span class="instructions">How important is each skill to your career transition?</span>
-                    </th>
+                    <th>Current Skills <span class="instructions">Existing skills</span></th>
+                    <th>Proficiency (1-5) <span class="instructions">1=Beginner, 5=Expert</span></th>
+                    <th>Skills to Develop <span class="instructions">New skills needed</span></th>
+                    <th>Priority <span class="instructions">Importance level</span></th>
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody></tbody>
         </table>
         <button class="add-button" onclick="addSkillRow()">Add Skill</button>
     </div>
 
     <div class="section">
         <h2>Learning and Development Plan</h2>
-        <div id="skills-container">
-        </div>
+        <div id="skills-container"></div>
         <button class="add-button" onclick="addSkill()">Add Another Skill</button>
     </div>
 
     <div class="section">
         <h2>Resources and Support</h2>
-        <label for="mentors">Potential Mentors/Networks:
-            <span class="instructions">List potential mentors or professional networks that can support your career transition.</span>
-        </label>
+        <label for="mentors">Potential Mentors/Networks: <span class="instructions">List support resources</span></label>
         <textarea id="mentors"></textarea>
 
-        <label for="budget">Budget Allocation:
-            <span class="instructions">Estimate your budget for training courses, travel, networking events, etc.</span>
-        </label>
+        <label for="budget">Budget Allocation: <span class="instructions">Estimate training costs</span></label>
         <textarea id="budget"></textarea>
     </div>
 
     <div class="section">
         <h2>Progress Tracking</h2>
-        <div>
-            <label>Checkpoint Dates:
-                <span class="instructions">Set regular checkpoints to review your progress (e.g., 30 days, 90 days).</span>
-            </label>
-            <div>
-                <label>30-day review: <input type="date" id="review-30"></label>
-            </div>
-            <div>
-                <label>90-day review: <input type="date" id="review-90"></label>
-                </div>
-            <div>
-                <label>Mid-point review: <input type="date" id="review-mid"></label>
-                </div>
-            <div>
-                <label>Final review: <input type="date" id="review-final"></label>
-             </div>
-        </div>
-        <div>
-            <label for="reflection">Reflection Notes:
-                <span class="instructions">Record your reflections on your progress, challenges, and insights.</span>
-            </label>
-            <textarea id="reflection"></textarea>
-        </div>
+        <label>Checkpoint Dates: <span class="instructions">Set review dates</span></label>
+        <div><label>30-day review: <input type="date" id="review-30"></label></div>
+        <div><label>90-day review: <input type="date" id="review-90"></label></div>
+        <div><label>Mid-point review: <input type="date" id="review-mid"></label></div>
+        <div><label>Final review: <input type="date" id="review-final"></label></div>
+
+        <label for="reflection">Reflection Notes: <span class="instructions">Record progress insights</span></label>
+        <textarea id="reflection"></textarea>
     </div>
 
     <div class="section">
         <h2>Risk Assessment and Mitigation</h2>
-        <label>What will you do if: <br>
-                You don't get the promotion you hoped for?
-                <span class="instructions">Consider what alternative steps you can take.</span>
-                </label>
-        <textarea></textarea>
-        <label>What will you do if: <br>
-                You can't find a mentor?
-                <span class="instructions">Are there alternatives?</span>
-                </label>
-        <textarea></textarea></label>
-            <label>What will you do if: <br>
-               You lose your job?
-                <span class="instructions">Outline steps you can take to gain employment</span>
-                </label>
-        <textarea></textarea>
+        <label>What if you don't get the promotion? <span class="instructions">Alternative steps</span></label>
+        <textarea id="no-promotion"></textarea>
+        
+        <label>What if you can't find a mentor? <span class="instructions">Alternatives</span></label>
+        <textarea id="no-mentor"></textarea>
+        
+        <label>What if you lose your job? <span class="instructions">Steps to gain employment</span></label>
+        <textarea id="job-loss"></textarea>
     </div>
 
     <div class="section">
         <h2>Additional Notes</h2>
-        <label for="challenges">Challenges/Obstacles to Address:
-            <span class="instructions">List any potential challenges that might hinder your progress.</span>
-        </label>
+        <label for="challenges">Challenges/Obstacles: <span class="instructions">Potential hurdles</span></label>
         <textarea id="challenges"></textarea>
-        <div>
-            <label for="motivation">Motivation/Inspiration:
-                <span class="instructions">What keeps you motivated and inspired?</span>
-            </label>
-            <textarea id="motivation"></textarea>
-        </div>
+        
+        <label for="motivation">Motivation/Inspiration: <span class="instructions">What keeps you going?</span></label>
+        <textarea id="motivation"></textarea>
     </div>
 
     <div class="button-container">
-        <input type="file" id="fileInput" style="display: none;" accept=".txt">
-        <button class="save-button" onclick="saveForm()">Save</button>
-        <button class="load-button" onclick="loadForm()">Load</button>
-        <button class="import-button" onclick="document.getElementById('fileInput').click();">Import</button>
-        <button class="export-button" onclick="exportForm()">Export</button>
-        <button class="generate-button" onclick="generatePDF()">Generate Printable PDF</button>
+        <input type="file" id="fileInput" style="display: none;" accept=".json">
+        <button onclick="saveForm()">Save</button>
+        <button onclick="loadForm()">Load</button>
+        <button onclick="document.getElementById('fileInput').click()">Import</button>
+        <button onclick="exportForm()">Export JSON</button>
+        <button onclick="exportToPDF()">Export PDF</button>
+        <button onclick="generatePDF()">Generate Printable View</button>
     </div>
 
-    <!-- PDF Preview Section -->
-    <div id="pdf-preview">
-        <!-- Content will be generated dynamically -->
-    </div>
+    <div id="pdf-preview" style="display: none;"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
- function getFormData() {
-            const formData = {};
-            document.querySelectorAll('input, textarea, select').forEach(el => {
-                formData[el.id] = el.value;
-            });
+        const { jsPDF } = window.jspdf;
 
-       const coreValuesSelect = document.getElementById('core-values');
-    formData['core-values'] = Array.from(coreValuesSelect.selectedOptions).map(option => option.value);
-
-            return formData;
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
         }
-    function formatDate(dateString) {
-            if (!dateString) return "";
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', {
+
+        function getFormData() {
+            try {
+                const formData = {};
+                document.querySelectorAll('input, textarea, select').forEach(el => {
+                    if (el.id) {
+                        formData[el.id] = el.type === 'select-multiple' 
+                            ? Array.from(el.selectedOptions).map(opt => opt.value)
+                            : el.value;
+                    }
+                });
+                return formData;
+            } catch (error) {
+                showNotification('Error collecting form data', 'error');
+                throw error;
+            }
+        }
+
+        function setFormValues(values) {
+            try {
+                Object.entries(values).forEach(([key, value]) => {
+                    const el = document.getElementById(key);
+                    if (el) {
+                        if (el.type === 'select-multiple') {
+                            Array.from(el.options).forEach(opt => {
+                                opt.selected = Array.isArray(value) && value.includes(opt.value);
+                            });
+                        } else {
+                            el.value = value;
+                        }
+                    }
+                });
+            } catch (error) {
+                showNotification('Error setting form values', 'error');
+                throw error;
+            }
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return "Not set";
+            return new Date(dateString).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
             });
         }
 
-        function generateTextContent(formData) {
-            let txtContent = "Career Transition Plan\n\n";
-
-            for (const key in formData) {
-                if (formData.hasOwnProperty(key)) {
-                    txtContent += `${key}: ${formData[key]}\n`;
-                }
-            }
-
-            return txtContent;
-        }
-        function download(filename, text) {
-          const element = document.createElement('a');
-          element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-          element.setAttribute('download', filename);
-
-          element.style.display = 'none';
-          document.body.appendChild(element);
-
-          element.click();
-
-          document.body.removeChild(element);
-        }
-
-        function exportForm() {
-            const formData = getFormData();
-            const txtContent = generateTextContent(formData);
-            download("career_transition_plan.txt", txtContent);
-        }
-
-        function handleFileSelect(evt) {
-          const file = evt.target.files[0];
-
-          if (file) {
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-              const fileContent = e.target.result;
-              const data = {};
-
-              // Splitting the file content by each line
-              fileContent.split('\n').forEach(line => {
-                 //Splitting the lines by the colon and the space to seperate the key and value
-                const [key, value] = line.split(': ');
-                if (key && value) {
-                  data[key.trim()] = value.trim();
-                }
-              });
-
-              setFormValues(data);
-            };
-
-            reader.onerror = function(e) {
-              console.error("Error reading the file", e);
-               alert("Error reading the file. Please make sure it's in the correct format.");
-            };
-
-            reader.readAsText(file);
-          }
-        }
-        document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-
         function saveForm() {
-            localStorage.setItem('formValues', JSON.stringify(getFormData()));
-            alert("Form data saved to browser. To save a copy of the text, you can export all to text.")
+            try {
+                const data = getFormData();
+                localStorage.setItem('formValues', JSON.stringify(data));
+                showNotification('Form saved successfully', 'success');
+            } catch (error) {
+                showNotification('Error saving form', 'error');
+                console.error('Save error:', error);
+            }
         }
 
         function loadForm() {
-            let formData = localStorage.getItem('formValues');
-            if (formData) {
-                formData = JSON.parse(formData);
-                setFormValues(formData);
-                alert("Form data loaded. Please verify");
-            } else {
-                alert("No form data found. Please fill one in and select save.");
+            try {
+                const data = localStorage.getItem('formValues');
+                if (!data) throw new Error('No saved data');
+                setFormValues(JSON.parse(data));
+                showNotification('Form loaded successfully', 'success');
+            } catch (error) {
+                showNotification('No saved data or error loading', 'error');
+                console.error('Load error:', error);
             }
         }
 
-        function setFormValues(values) {
-         document.querySelectorAll('input, textarea, select').forEach(el => {
-             if (values[el.id]) {
-              el.value = values[el.id] ;
-        }});
-        }
-    document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-
-         function generatePDF() {
-            // Get all form values
-            const formData = {};
-            document.querySelectorAll('input, textarea, select').forEach(el => {
-                formData[el.id] = el.value;
-            });
-
-            // Basic validation (can be extended)
-            if (!formData.name || !formData.role || !formData.industry) {
-                alert("Please fill in the Personal Information section.");
-               
+        function exportForm() {
+            try {
+                const data = getFormData();
+                const json = JSON.stringify(data);
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'career_plan.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                showNotification('JSON exported successfully', 'success');
+            } catch (error) {
+                showNotification('Error exporting JSON', 'error');
+                console.error('Export error:', error);
             }
-
-              const coreValuesSelect = document.getElementById('core-values');
-             const coreValues = Array.from(coreValuesSelect.selectedOptions).map(option => option.value).join(', ');
-
-            let pdfContent = `<h1>Career Transition Plan</h1>`;
-        pdfContent += `<h2>Personal Information</h2>`;
-        pdfContent += `<p><strong>Name:</strong> ${formData.name}</p>`;
-        pdfContent += `<p><strong>Current Role:</strong> ${formData.role}</p>`;
-        pdfContent += `<p><strong>Industry:</strong> ${formData.industry}</p>`;
-        pdfContent += `<p><strong>Period Covered:</strong> ${formatDate(formData['start-date'])} to ${formatDate(formData['end-date'])}</p>`;
-
-    // Career Goals
-        pdfContent += `<h2>Career Goals</h2>`;
-        pdfContent += `<p><strong>Short-term:</strong> ${formData['short-term']}</p>`;
-        pdfContent += `<p><strong>Long-term:</strong> ${formData['long-term']}</p>`;
-         pdfContent += `<p><strong>Core Values:</strong> ${coreValues}</p>`;
-
-         pdfContent += `<p><strong>Elevator Pitch:</strong> ${formData['elevator-pitch']}</p>`;
-        pdfContent += `<p><strong>Stop Doing:</strong> ${formData['stop-doing']}</p>`;
- // Skills Assessment
-        let skillsHTML = `<h2>Skills Assessment</h2><table style="width:100%; border-collapse: collapse;"><thead><tr><th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Current Skills</th><th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Proficiency</th><th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Skills to Develop</th><th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Priority</th></tr></thead><tbody>`;
-        const skillsTableRows = document.querySelectorAll('#skills-table tbody tr');
-        skillsTableRows.forEach((row, index) => {
-           const currentSkill = row.querySelector('td:nth-child(1) input').value || "";
-            const proficiency = row.querySelector('td:nth-child(2) select').value || "";
-            const skillToDevelop = row.querySelector('td:nth-child(3) input').value || "";
-            const priority = row.querySelector('td:nth-child(4) select').value || "";
-    skillsHTML += `<tr><td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${currentSkill}</td><td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${proficiency}</td><td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${skillToDevelop}</td><td style="border: 1px solid #ddd; padding: 8px; text-align: left;">${priority}</td></tr>`;
-
-        });
-        skillsHTML += `</tbody></table>`;
-        pdfContent += skillsHTML;
-         // Learning and dev
-                const learningPlanDivs = document.querySelectorAll('#skills-container .skill-section');
-            pdfContent += `<h2>Learning and Development Plan</h2>`;
-    learningPlanDivs.forEach((skillSection, index) => {
-        pdfContent += `<h3>Skill ${index + 1}: ${skillSection.querySelector('h3 input').value}</h3>`;
-        pdfContent += `<p><strong>Learning Activity:</strong> ${skillSection.querySelector('div:nth-child(2) input').value}</p>`;
-        pdfContent += `<p><strong>Resources Needed:</strong> ${skillSection.querySelector('div:nth-child(3) input').value}</p>`;
-        pdfContent += `<p><strong>Estimated Time:</strong> ${skillSection.querySelector('div:nth-child(4) input').value}</p>`;
-        pdfContent += `<p><strong>Start Date:</strong> ${skillSection.querySelector('div:nth-child(5) input').value}</p>`;
-        pdfContent += `<p><strong>Completion Date:</strong> ${skillSection.querySelector('div:nth-child(6) input').value}</p>`;
-        pdfContent += `<p><strong>Progress Notes:</strong> ${skillSection.querySelector('div:nth-child(7) textarea').value}</p>`;
-
-        // Success Measures are a multi select, so, get its vaules.
-        const measures = skillSection.querySelectorAll('div:nth-child(8) select option:checked');
-        let measuresText = [];
-        measures.forEach(m => measuresText.push(m.value));
-
-        pdfContent += `<p><strong>Success Measures:</strong> ${measuresText.join(', ')}</p>`;
-    });
-
-     pdfContent += `<h2>Resources and Support </h2>`;
-         pdfContent += `<p> <strong>Potential Mentors/Networks:</strong>  ${document.getElementById('mentors').value}</p>`;
-         pdfContent += `<p> <strong>Budget Allocation:</strong>  ${document.getElementById('budget').value}</p>`;
-        const pdfPreview = document.getElementById('pdf-preview');
-            pdfPreview.innerHTML = pdfContent;
-            pdfPreview.style.display = 'block';
-
-            window.scrollTo(0, 0);
-          setTimeout(function () {
-                  pdfPreview.style.display = 'none';  // hide this right before you print.
-                window.print();
-                // After 500 milliseconds, hide the preview again
-            }, 500);
         }
 
-       function addSkillRow() {
-            const table = document.querySelector('#skills-table tbody');
-            const newRow = document.createElement('tr');
-            newRow.innerHTML = `
-                <td>
-                    <input type="text" placeholder="e.g., Project Management">
-                </td>
-                <td>
-                    <select>
+        function exportToPDF() {
+            try {
+                const formData = getFormData();
+                const doc = new jsPDF();
+                let yPos = 20;
+
+                // Title
+                doc.setFontSize(20);
+                doc.setTextColor('#1e3a8a');
+                doc.text('Career Transition Plan', 105, yPos, { align: 'center' });
+                yPos += 15;
+
+                // Personal Information
+                doc.setFontSize(16);
+                doc.text('Personal Information', 20, yPos);
+                yPos += 10;
+                doc.setFontSize(12);
+                doc.setTextColor('#000000');
+                doc.text(`Name: ${formData.name}`, 20, yPos);
+                yPos += 7;
+                doc.text(`Role: ${formData.role}`, 20, yPos);
+                yPos += 7;
+                doc.text(`Industry: ${formData.industry}`, 20, yPos);
+                yPos += 7;
+                doc.text(`Period: ${formatDate(formData['start-date'])} to ${formatDate(formData['end-date'])}`, 20, yPos);
+                yPos += 15;
+
+                // Career Goals
+                doc.setFontSize(16);
+                doc.setTextColor('#1e3a8a');
+                doc.text('Career Goals', 20, yPos);
+                yPos += 10;
+                doc.setFontSize(12);
+                doc.setTextColor('#000000');
+                doc.text('Short-term:', 20, yPos);
+                doc.text(formData['short-term'], 40, yPos, { maxWidth: 150 });
+                yPos += doc.getTextDimensions(formData['short-term'], { maxWidth: 150 }).h + 5;
+                doc.text('Long-term:', 20, yPos);
+                doc.text(formData['long-term'], 40, yPos, { maxWidth: 150 });
+                yPos += doc.getTextDimensions(formData['long-term'], { maxWidth: 150 }).h + 5;
+                doc.text(`Core Values: ${formData['core-values'].join(', ')}`, 20, yPos);
+                yPos += 7;
+                doc.text('Elevator Pitch:', 20, yPos);
+                doc.text(formData['elevator-pitch'], 40, yPos, { maxWidth: 150 });
+                yPos += doc.getTextDimensions(formData['elevator-pitch'], { maxWidth: 150 }).h + 5;
+                doc.text('Stop Doing:', 20, yPos);
+                doc.text(formData['stop-doing'], 40, yPos, { maxWidth: 150 });
+                yPos += doc.getTextDimensions(formData['stop-doing'], { maxWidth: 150 }).h + 15;
+
+                // Skills Assessment
+                doc.setFontSize(16);
+                doc.setTextColor('#1e3a8a');
+                doc.text('Skills Assessment', 20, yPos);
+                yPos += 10;
+                doc.setFontSize(12);
+                doc.setTextColor('#000000');
+                document.querySelectorAll('#skills-table tbody tr').forEach((row, i) => {
+                    const current = row.cells[0].querySelector('input').value;
+                    const prof = row.cells[1].querySelector('select').value;
+                    const develop = row.cells[2].querySelector('input').value;
+                    const priority = row.cells[3].querySelector('select').value;
+                    doc.text(`${i+1}. ${current} (Prof: ${prof}) - To Develop: ${develop} (Priority: ${priority})`, 20, yPos, { maxWidth: 170 });
+                    yPos += 7;
+                });
+                yPos += 10;
+
+                // Learning and Development
+                doc.setFontSize(16);
+                doc.setTextColor('#1e3a8a');
+                doc.text('Learning and Development Plan', 20, yPos);
+                yPos += 10;
+                doc.setFontSize(12);
+                doc.setTextColor('#000000');
+                document.querySelectorAll('#skills-container .skill-section').forEach((skill, i) => {
+                    const name = skill.querySelector('h3 input').value;
+                    const activity = skill.querySelector('div:nth-child(2) input').value;
+                    const resources = skill.querySelector('div:nth-child(3) input').value;
+                    doc.text(`Skill ${i+1}: ${name}`, 20, yPos);
+                    yPos += 7;
+                    doc.text(`Activity: ${activity}`, 30, yPos);
+                    yPos += 7;
+                    doc.text(`Resources: ${resources}`, 30, yPos);
+                    yPos += 7;
+                });
+
+                doc.save('career_transition_plan.pdf');
+                showNotification('PDF exported successfully', 'success');
+            } catch (error) {
+                showNotification('Error exporting to PDF', 'error');
+                console.error('PDF export error:', error);
+            }
+        }
+
+        function generatePDF() {
+            try {
+                const formData = getFormData();
+                let content = `
+                    <h1>Career Transition Plan</h1>
+                    <h2>Personal Information</h2>
+                    <p><strong>Name:</strong> ${formData.name}</p>
+                    <p><strong>Role:</strong> ${formData.role}</p>
+                    <p><strong>Industry:</strong> ${formData.industry}</p>
+                    <p><strong>Period:</strong> ${formatDate(formData['start-date'])} to ${formatDate(formData['end-date'])}</p>
+                    
+                    <h2>Career Goals</h2>
+                    <p><strong>Short-term:</strong> ${formData['short-term']}</p>
+                    <p><strong>Long-term:</strong> ${formData['long-term']}</p>
+                    <p><strong>Core Values:</strong> ${formData['core-values'].join(', ')}</p>
+                    <p><strong>Elevator Pitch:</strong> ${formData['elevator-pitch']}</p>
+                    <p><strong>Stop Doing:</strong> ${formData['stop-doing']}</p>
+                `;
+
+                content += `<h2>Skills Assessment</h2><table><thead><tr><th>Current Skills</th><th>Proficiency</th><th>Skills to Develop</th><th>Priority</th></tr></thead><tbody>`;
+                document.querySelectorAll('#skills-table tbody tr').forEach(row => {
+                    const cells = row.cells;
+                    content += `<tr><td>${cells[0].querySelector('input').value}</td><td>${cells[1].querySelector('select').value}</td><td>${cells[2].querySelector('input').value}</td><td>${cells[3].querySelector('select').value}</td></tr>`;
+                });
+                content += `</tbody></table>`;
+
+                content += `<h2>Learning and Development Plan</h2>`;
+                document.querySelectorAll('#skills-container .skill-section').forEach((skill, i) => {
+                    content += `
+                        <h3>Skill ${i+1}: ${skill.querySelector('h3 input').value}</h3>
+                        <p><strong>Activity:</strong> ${skill.querySelector('div:nth-child(2) input').value}</p>
+                        <p><strong>Resources:</strong> ${skill.querySelector('div:nth-child(3) input').value}</p>
+                        <p><strong>Time:</strong> ${skill.querySelector('div:nth-child(4) input').value}</p>
+                        <p><strong>Start:</strong> ${formatDate(skill.querySelector('div:nth-child(5) input').value)}</p>
+                        <p><strong>End:</strong> ${formatDate(skill.querySelector('div:nth-child(6) input').value)}</p>
+                        <p><strong>Notes:</strong> ${skill.querySelector('div:nth-child(7) textarea').value}</p>
+                        <p><strong>Measures:</strong> ${Array.from(skill.querySelector('div:nth-child(8) select').selectedOptions).map(opt => opt.value).join(', ')}</p>
+                    `;
+                });
+
+                content += `
+                    <h2>Resources and Support</h2>
+                    <p><strong>Mentors:</strong> ${formData.mentors}</p>
+                    <p><strong>Budget:</strong> ${formData.budget}</p>
+                    
+                    <h2>Progress Tracking</h2>
+                    <p><strong>30-day:</strong> ${formatDate(formData['review-30'])}</p>
+                    <p><strong>90-day:</strong> ${formatDate(formData['review-90'])}</p>
+                    <p><strong>Mid-point:</strong> ${formatDate(formData['review-mid'])}</p>
+                    <p><strong>Final:</strong> ${formatDate(formData['review-final'])}</p>
+                    <p><strong>Reflection:</strong> ${formData.reflection}</p>
+                    
+                    <h2>Risk Assessment</h2>
+                    <p><strong>No Promotion:</strong> ${formData['no-promotion']}</p>
+                    <p><strong>No Mentor:</strong> ${formData['no-mentor']}</p>
+                    <p><strong>Job Loss:</strong> ${formData['job-loss']}</p>
+                    
+                    <h2>Additional Notes</h2>
+                    <p><strong>Challenges:</strong> ${formData.challenges}</p>
+                    <p><strong>Motivation:</strong> ${formData.motivation}</p>
+                `;
+
+                const preview = document.getElementById('pdf-preview');
+                preview.innerHTML = content;
+                preview.style.display = 'block';
+                setTimeout(() => {
+                    window.print();
+                    preview.style.display = 'none';
+                }, 100);
+            } catch (error) {
+                showNotification('Error generating preview', 'error');
+                console.error('Preview error:', error);
+            }
+        }
+
+        function addSkillRow() {
+            try {
+                const table = document.querySelector('#skills-table tbody');
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><input type="text" placeholder="e.g., Project Management"></td>
+                    <td><select>
                         <option value="1">1 - Beginner</option>
                         <option value="2">2 - Elementary</option>
                         <option value="3">3 - Intermediate</option>
                         <option value="4">4 - Advanced</option>
                         <option value="5">5 - Expert</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" placeholder="e.g., AI for Project Managers">
-                </td>
-                <td>
-                    <select>
+                    </select></td>
+                    <td><input type="text" placeholder="e.g., AI for Project Managers"></td>
+                    <td><select>
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
-                    </select>
-                </td>
-                <td>
-                    <button class="remove-button" onclick="removeRow(this)">Remove</button>
-                </td>
-            `;
-            table.appendChild(newRow);
+                    </select></td>
+                    <td><button class="remove-button" onclick="this.parentNode.parentNode.remove()">Remove</button></td>
+                `;
+                table.appendChild(row);
+            } catch (error) {
+                showNotification('Error adding skill row', 'error');
+                console.error('Add skill row error:', error);
+            }
         }
-         function removeRow(button) {
-            const row = button.parentNode.parentNode;
-            row.parentNode.removeChild(row);
-        }
+
         function addSkill() {
-            const container = document.getElementById('skills-container');
-            const skillCount = container.children.length + 1;
-            const newSkill = document.createElement('div');
-            newSkill.className = 'skill-section';
-            newSkill.innerHTML = `
-                <h3>Skill ${skillCount}: <input type="text" placeholder="Enter skill name"></h3>
-                <div>
-                    <label>Learning Activity (Course, Book, Workshop):</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Resources Needed:</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Estimated Time:</label>
-                    <input type="text" placeholder="e.g., 10 hours, 4 weeks">
-                </div>
-                <div>
-                    <label>Start Date:</label>
-                    <input type="date">
-                </div>
-                <div>
-                    <label>Completion Date:</label>
-                    <input type="date">
-                </div>
-                <div>
-                    <label>Progress Notes:</label>
-                    <textarea></textarea>
-                </div>
-                       <div>
-                    <label>Success Measures:</label>
-                         <select multiple>
+            try {
+                const container = document.getElementById('skills-container');
+                const count = container.children.length + 1;
+                const div = document.createElement('div');
+                div.className = 'skill-section';
+                div.innerHTML = `
+                    <h3>Skill ${count}: <input type="text" placeholder="Enter skill name"></h3>
+                    <div><label>Learning Activity:</label><input type="text"></div>
+                    <div><label>Resources Needed:</label><input type="text"></div>
+                    <div><label>Estimated Time:</label><input type="text" placeholder="e.g., 10 hours"></div>
+                    <div><label>Start Date:</label><input type="date"></div>
+                    <div><label>Completion Date:</label><input type="date"></div>
+                    <div><label>Progress Notes:</label><textarea></textarea></div>
+                    <div><label>Success Measures:</label>
+                        <select multiple>
                             <option value="pass">Pass assessment</option>
                             <option value="Complete">Complete project</option>
                             <option value="Certification">Earn certification</option>
                             <option value="feedback">Positive feedback</option>
                         </select>
                     </div>
-                <button class="remove-button" onclick="removeSkill(this)">Remove Skill</button>
-            `;
-            container.appendChild(newSkill);
+                    <button class="remove-button" onclick="removeSkill(this)">Remove Skill</button>
+                `;
+                container.appendChild(div);
+            } catch (error) {
+                showNotification('Error adding skill', 'error');
+                console.error('Add skill error:', error);
+            }
         }
 
         function removeSkill(button) {
-            const skillSection = button.parentNode;
-            skillSection.parentNode.removeChild(skillSection);
-             // Renumber the remaining skills
-            const skillSections = document.querySelectorAll('.skill-section');
-            skillSections.forEach((section, index) => {
-                const heading = section.querySelector('h3');
-                heading.innerHTML = `Skill ${index + 1}: <input type="text" placeholder="Enter skill name" value="${section.querySelector('input').value}">`;
-            });
-        }
-  
-   function loadForm() {
-    let formData = localStorage.getItem('formValues');
-
-    if (formData) {
-        formData = JSON.parse(formData);
-        setFormValues(formData);
-        alert("Form data loaded. Please verify");
-    } else {
-        alert("No form data found. Please fill one in and select save.");
-    }
-
-}
-
-        function setFormValues(values) {
-         document.querySelectorAll('input, textarea, select').forEach(el => {
-             if (values[el.id]) {
-              el.value = values[el.id] ;
-        }});
+            try {
+                const section = button.parentNode;
+                section.parentNode.removeChild(section);
+                const sections = document.querySelectorAll('.skill-section');
+                sections.forEach((sec, i) => {
+                    sec.querySelector('h3').innerHTML = `Skill ${i+1}: <input type="text" placeholder="Enter skill name" value="${sec.querySelector('input').value}">`;
+                });
+            } catch (error) {
+                showNotification('Error removing skill', 'error');
+                console.error('Remove skill error:', error);
+            }
         }
 
-         document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date();
-            const sixMonthsLater = new Date();
-            sixMonthsLater.setMonth(today.getMonth() + 6);
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            try {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    try {
+                        const data = JSON.parse(ev.target.result);
+                        setFormValues(data);
+                        showNotification('Import successful', 'success');
+                    } catch (error) {
+                        showNotification('Invalid JSON file', 'error');
+                        console.error('Import parse error:', error);
+                    }
+                };
+                reader.onerror = () => showNotification('Error reading file', 'error');
+                reader.readAsText(file);
+            } catch (error) {
+                showNotification('Error handling import', 'error');
+                console.error('Import error:', error);
+            }
+        });
 
-            document.getElementById('start-date').valueAsDate = today;
-            document.getElementById('end-date').valueAsDate = sixMonthsLater;
-                loadForm()
-             addSkillRow();  // Add one row by default
-
-       //  let pdfContent = ``
-
-         });
-
-              document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-
-function exportForm() {
-            const values = getFormData();
-
-            let data = "text/json;charset=utf-8," + encodeURIComponent(
-                JSON.stringify(values)
-            );
-
-            const a = document.createElement('a');
-            a.href = 'data:' + data;
-            a.download = 'data.json';
-            a.innerHTML = "Export to file";
-
-            const container = document.getElementsByClassName("buttons")[0];
-            container.appendChild(a);
-
-            a.click()
-        }
-
-//This event listener was added to ensure the import could process correctly
-function handleFileSelect(event) {
-  const reader = new FileReader();
-
-  reader.onload = function(){
-    //Setting our load event to JSON which the page can then process.
-    const jsonData = JSON.parse(reader.result);
-
-    //Itterating through the json file so we can assign
-     for (const key in jsonData) {
-        if (jsonData.hasOwnProperty(key)) {
-
-            //Setting the data
-            document.getElementById(key).value = jsonData[key];
-          }
-       }
-
-  };
-
-  //Reading as text
-  reader.readAsText(event.target.files[0]);
-
-}
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                const today = new Date();
+                const sixMonths = new Date(today.setMonth(today.getMonth() + 6));
+                document.getElementById('start-date').valueAsDate = new Date();
+                document.getElementById('end-date').valueAsDate = sixMonths;
+                addSkillRow();
+                loadForm();
+            } catch (error) {
+                showNotification('Error initializing form', 'error');
+                console.error('Init error:', error);
+            }
+        });
     </script>
 </body>
 </html>
