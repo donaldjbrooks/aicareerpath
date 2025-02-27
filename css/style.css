@@ -178,8 +178,6 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* Existing CSS remains unchanged until the end */
-
 .footer {
     text-align: center;
     padding: var(--spacing-md);
