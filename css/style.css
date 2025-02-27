@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --background-color: #f0f7ff;
+    --card-background: #ffffff;
+    --border-color: #bfdbfe;
+    --success-color: #15803d;
+    --warning-color: #d97706;
+    --error-color: #b91c1c;
+    --text-color: #1e3a8a;
+    --text-light: #64748b;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h1 i, h2 i, h3 i {
+    margin-right: 8px;
+}
+
+.section {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.privacy-notice {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+label i {
+    margin-right: 6px;
+}
+
+input[type="text"], textarea, select, select[multiple] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    color: var(--text-color);
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1.5px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+th i {
+    margin-right: 6px;
+}
+
+.instructions {
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 5px;
+    display: block;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+button i {
+    margin-right: 6px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.add-button {
+    background-color: var(--success-color);
+}
+
+.add-button:hover {
+    background-color: #166534;
+}
+
+.remove-button {
+    background-color: var(--error-color);
+}
+
+.remove-button:hover {
+    background-color: #991b1b;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    color: white;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+.notification.success {
+    background-color: var(--success-color);
+}
+
+.notification.error {
+    background-color: var(--error-color);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
