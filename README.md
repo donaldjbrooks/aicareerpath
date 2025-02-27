@@ -1,2 +1,2 @@
 # aicareerpath
-AI Career Transition Plan Template
+AI Career Transition Plan
