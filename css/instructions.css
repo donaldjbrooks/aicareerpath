@@ -111,3 +111,20 @@ button:hover {
     justify-content: center;
     gap: 20px;
 }
+
+/* Existing CSS remains unchanged until the end */
+
+.footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--card-background);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-top: var(--spacing-lg);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer i {
+    margin-right: 6px;
+}
