@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 timestamp: new Date().toISOString()
             };
 
-            // Store feedback locally (for demo purposes)
+            // Store feedback locally
             let storedFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
             storedFeedback.push(feedback);
             localStorage.setItem('feedback', JSON.stringify(storedFeedback));
 
+            // Show success notification
             showNotification('Feedback submitted successfully! Thank you for your input.', 'success');
             form.reset();
         } catch (error) {
@@ -30,9 +31,12 @@ function showNotification(message, type) {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
+    notification.style.opacity = '1'; // Set initial opacity
     document.body.appendChild(notification);
+
+    // Ensure notification is visible for 3 seconds before fading
     setTimeout(() => {
         notification.style.opacity = '0';
-        setTimeout(() => notification.remove(), 300);
+        setTimeout(() => notification.remove(), 300); // Remove after fade-out
     }, 3000);
 }

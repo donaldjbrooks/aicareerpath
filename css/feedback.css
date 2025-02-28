@@ -142,8 +142,13 @@ button:hover {
     padding: 15px;
     border-radius: 6px;
     color: white;
-    transition: opacity 0.3s;
+    background-color: var(--success-color); /* Default background */
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.3s ease-in-out;
     z-index: 1000;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .notification.success {
