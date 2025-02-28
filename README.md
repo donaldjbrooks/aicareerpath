@@ -1,2 +1,2 @@
-# aicareerpath
+# aicareerplan
 AI Career Transition Plan
